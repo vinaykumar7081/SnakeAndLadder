@@ -36,12 +36,17 @@ namespace SnakeLadderGame
                         }
                         break;
                     case LADDER:
-                        this.position += this.dieRoll();
+                        int maxValue= this.dieRoll();
+                        this.position += maxValue;
+                        if (this.position >100)
+                        {
+                            this.position -= maxValue;
+                        }
                         break;
                 }
 
             }
-            Console.WriteLine("You Have got "+this.position+ " "+" Number");
+            Console.WriteLine("You Have win with "+this.position+ " "+" Number");
 
         }
         
