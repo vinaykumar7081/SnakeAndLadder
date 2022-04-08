@@ -11,7 +11,9 @@ namespace SnakeLadderGame
         const int position = 0;
         public int dieRoll()
         { 
-          return position;
+            Random random = new Random();
+            int roll = random.Next(1, 7);
+          return roll;
         }
         
     }
